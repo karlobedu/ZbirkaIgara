@@ -15,6 +15,8 @@
 
         public string? Platforme { get; set; }
 
-        public int? IdZanra { get; set; }
+        public int IdZanra { get; set; }
+        public string? Trailer { get; set; }
+        public string? UrlSlike { get; set; }
     }
 }

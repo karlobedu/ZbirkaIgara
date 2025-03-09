@@ -7,6 +7,8 @@ public partial class Igra
 {
     public int Id { get; set; }
 
+    public int? IdZanra { get; set; }
+
     public string Naslov { get; set; } = null!;
 
     public string? Opis { get; set; }
@@ -19,7 +21,7 @@ public partial class Igra
 
     public string? Platforme { get; set; }
 
-    public int? IdZanra { get; set; }
+    public string? Trailer { get; set; }
 
-    public virtual Zanr? IdZanraNavigation { get; set; }
+    public string? UrlSlike { get; set; }
 }

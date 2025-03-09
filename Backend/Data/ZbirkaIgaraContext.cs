@@ -20,14 +20,16 @@ public partial class ZbirkaIgaraContext : DbContext
 
     public virtual DbSet<Zanr> Zanrovi { get; set; }
 
+
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         modelBuilder.Entity<Igra>(entity =>
         {
-            entity.HasKey(e => e.Id).HasName("PK__Igra__3214EC07DDBF58E4");
+            entity.HasKey(e => e.Id).HasName("PK__Igra__3214EC0746A5DDEF");
+
             entity.ToTable("Igra");
+
             entity.Property(e => e.Hltb).HasColumnName("hltb");
-            entity.Property(e => e.IdZanra).HasColumnName("Id_Zanra");
             entity.Property(e => e.Naslov)
                 .HasMaxLength(255)
                 .IsUnicode(false);
@@ -38,15 +40,13 @@ public partial class ZbirkaIgaraContext : DbContext
             entity.Property(e => e.Platforme)
                 .HasMaxLength(255)
                 .IsUnicode(false);
-
-            entity.HasOne(d => d.IdZanraNavigation).WithMany(p => p.Igre)
-                .HasForeignKey(d => d.IdZanra)
-                .HasConstraintName("FK_Igra_Zanr");
+            entity.Property(e => e.Trailer).IsUnicode(false);
+            entity.Property(e => e.UrlSlike).IsUnicode(false);
         });
 
         modelBuilder.Entity<Zanr>(entity =>
         {
-            entity.HasKey(e => e.Id).HasName("PK__Zanr__3214EC0721E31B49");
+            entity.HasKey(e => e.Id).HasName("PK__Zanr__3214EC07434190E8");
 
             entity.ToTable("Zanr");
 
@@ -57,5 +57,6 @@ public partial class ZbirkaIgaraContext : DbContext
 
         OnModelCreatingPartial(modelBuilder);
     }
+
     partial void OnModelCreatingPartial(ModelBuilder modelBuilder);
 }
