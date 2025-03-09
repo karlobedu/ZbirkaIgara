@@ -1,6 +1,7 @@
 ﻿using AutoMapper;
 using Microsoft.AspNetCore.Mvc;
 using ZbirkaIgara.Data;
+using ZbirkaIgara.Models; 
 
 namespace ZbirkaIgara.Controllers
 {

@@ -91,8 +91,10 @@ namespace ZbirkaIgara.Controllers
 				igra.Ocjena = AzuriranaIgra.Ocjena;
 				igra.Platforme = AzuriranaIgra.Platforme;
 				igra.IdZanra = AzuriranaIgra.IdZanra;
+				igra.Trailer = AzuriranaIgra.Trailer;
+				igra.UrlSlike = AzuriranaIgra.UrlSlike;
 
-				_context.SaveChanges();
+                _context.SaveChanges();
 
 				return Ok("Uspješno ažurirano!");
 			}
