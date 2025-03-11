@@ -15,8 +15,6 @@ public partial class Igra
 
     public int? Hltb { get; set; }
 
-    public decimal? Ocjena { get; set; }
-
     public DateOnly? DatumIzdavanja { get; set; }
 
     public string? Platforme { get; set; }

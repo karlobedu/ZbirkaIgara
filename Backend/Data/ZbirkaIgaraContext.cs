@@ -33,9 +33,6 @@ public partial class ZbirkaIgaraContext : DbContext
             entity.Property(e => e.Naslov)
                 .HasMaxLength(255)
                 .IsUnicode(false);
-            entity.Property(e => e.Ocjena)
-                .HasColumnType("decimal(4, 2)")
-                .HasColumnName("ocjena");
             entity.Property(e => e.Opis).IsUnicode(false);
             entity.Property(e => e.Platforme)
                 .HasMaxLength(255)
